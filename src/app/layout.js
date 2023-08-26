@@ -16,9 +16,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="insta.svg"></link>
         {/* https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png */}
       </head>
-      <body className="">
+      <body className="bg-gray-50 min-h-screen">
         {/* Header Section */}
-        <Header />
+        
         
         {children}
         </body>

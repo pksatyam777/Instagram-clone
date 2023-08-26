@@ -1,7 +1,11 @@
 import React from 'react'
+import Header from './components/Header'
+import Feed from './components/Feed'
 
 export default function page() {
   return (
-    <div>page</div>
+    <><Header />
+      <Feed />
+    </>
   )
 }
