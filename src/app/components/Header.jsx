@@ -5,7 +5,7 @@ import {AiFillHome} from 'react-icons/ai'
 import {FiPlusCircle} from 'react-icons/fi'
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-96  bg-white sticky shadow-md shadow-b z-30">
+    <header className="flex items-center justify-between px-96  bg-white sticky top-0 shadow-md shadow-b z-30">
         <div className="h-24 w-24 relative hidden lg:inline-grid cursor-pointer">
             <Image className="object-contain" layout='fill' src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" />
         </div>
