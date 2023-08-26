@@ -17,7 +17,7 @@ export default function Posts() {
         profileimg:"https://www.svgrepo.com/show/129839/avatar.svg",
     }]
   return (
-    <div className="px-48 mt-10">
+    <div className=" mt-10">
         {Posts.map((postss)=>(<Post key={postss.id} name={postss.name} caption={postss.caption} img={postss.img} profileimg={postss.profileimg} />))}
         </div>
   )

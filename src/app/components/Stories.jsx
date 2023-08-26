@@ -10,7 +10,7 @@ export default function Stories() {
         setStoryUsers(storyUsers)
     },[])
   return (
-    <div className="flex items-center space-x-2 p-6 shadow-md bg-white border border-gray-200 mt-8 overflow-x-scroll rounded-sm scrollbar-none px-48">
+    <div className="flex items-center space-x-2 p-6 shadow-md bg-white border border-gray-200 mt-8 overflow-x-scroll rounded-sm scrollbar-none">
         {storyUsers?.map((users)=>(<Story key={users.id} username={users.username} img={users.img} />))}
         </div>
   )

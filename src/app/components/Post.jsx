@@ -28,7 +28,7 @@ export default function Post({ name, caption, img, profileimg }) {
         
       </div>
       <div className="caption flex items-center space-x-2 p-2">
-        <span className="text-sm font-bold">{name}</span><span className="text-sm truncate">{caption}</span>
+        <span className="text-sm font-bold truncate">{name}</span><span className="text-sm truncate">{caption}</span>
       </div>
       <form className="p-2 flex items-center space-x-2">
         <HiOutlineEmojiHappy className="text-3xl" />
