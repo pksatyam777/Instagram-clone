@@ -2,7 +2,7 @@
 const nextConfig = {
     // add image hostname
     images: {
-        domains: ['upload.wikimedia.org'],
+        domains: ['upload.wikimedia.org','1000logos.net'],
         },
 }
 
