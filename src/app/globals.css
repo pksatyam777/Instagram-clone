@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+ @layer components{
+  .btn{
+    @apply text-2xl transform transition-transform hover:scale-125 ease-out duration-200 cursor-pointer
+  }
+ }
