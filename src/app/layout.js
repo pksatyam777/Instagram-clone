@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Providers from './components/Providers'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -18,9 +19,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-gray-50 min-h-screen">
         {/* Header Section */}
-        
+        <Providers>
         
         {children}
+        </Providers>
         </body>
     </html>
   )
