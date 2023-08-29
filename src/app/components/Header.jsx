@@ -6,8 +6,11 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import {AiFillHome} from 'react-icons/ai'
 import {FiPlusCircle} from 'react-icons/fi'
 import {useSession ,signIn ,signOut} from "next-auth/react";
+import {useRecoilState} from 'recoil'
+import {ModalState} from '../Atom/ModalAtom'
 export default function Header() {
-  const {data:session} =useSession()
+  const {data:session} =useSession();
+  const [open,setOpen]=useRecoilState(ModalState)
   return (
     <header className="flex items-center justify-between px-96  bg-white sticky top-0 shadow-md shadow-b z-30">
         <div className="h-24 w-24 relative hidden lg:inline-grid cursor-pointer">
@@ -23,9 +26,9 @@ export default function Header() {
            <input type="text" placeholder="search..." className="bg-gray-50 rounded-lg pl-12 border-gray-500 focus:ring-black focus:border-black  text" />
         </div>
         <div className=" flex justify-between space-x-6 items-center">
-            <AiFillHome className="text-2xl transform transition-transform hover:scale-125 duration-200 ease-out hidden lg:inline-grid" />
+            <AiFillHome  className="text-2xl transform transition-transform hover:scale-125 duration-200 ease-out hidden lg:inline-grid" />
             {session &&
-            <FiPlusCircle className="text-2xl transform transition-transform hover:scale-125 duration-200 ease-out"/>}
+            <FiPlusCircle onClick={()=>setOpen(true)} className="text-2xl transform transition-transform hover:scale-125 duration-200 ease-out"/>}
             {session && session?.user?.image? 
             <img src={session.user.image} className="rounded-full h-12 border p-1 cursor-pointer" onClick={()=>signOut()} /> :
             <p className="text-sm text-black cursor-pointer" onClick={()=>signIn()}>Sign in</p>

@@ -2,7 +2,7 @@ import Header from './components/Header'
 import Providers from './components/Providers'
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import RecoilProvider from './components/RecoilProvider'
 
 
 export const metadata = {
@@ -20,9 +20,11 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-50 min-h-screen">
         {/* Header Section */}
         <Providers>
-        
+          <RecoilProvider>
         {children}
+        </RecoilProvider>
         </Providers>
+        
         </body>
     </html>
   )
