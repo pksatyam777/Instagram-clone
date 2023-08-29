@@ -3,6 +3,7 @@ import React from 'react'
 import { signIn, signOut, useSession } from "next-auth/react";
 export default function MiniProfile() {
   const { data: session } = useSession();
+  if (!session) return null;
   return (
     <div className="mt-10  p-2 flex items-center space-x-2 ">
         <img src={session?.user?.image || "https://www.svgrepo.com/show/129839/avatar.svg"} alt="profile-img" className="rounded-full h-12 border p-1" />

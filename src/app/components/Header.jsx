@@ -5,7 +5,7 @@ import Link from 'next/link'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {AiFillHome} from 'react-icons/ai'
 import {FiPlusCircle} from 'react-icons/fi'
-import {useSession } from "next-auth/react";
+import {useSession ,signIn ,signOut} from "next-auth/react";
 export default function Header() {
   const {data:session} =useSession()
   return (
@@ -27,8 +27,8 @@ export default function Header() {
             {session &&
             <FiPlusCircle className="text-2xl transform transition-transform hover:scale-125 duration-200 ease-out"/>}
             {session && session?.user?.image? 
-            <img src={session.user.image} className="rounded-full h-12 border p-1" /> :
-            <Image height="40" width="40" className=""  src="https://www.svgrepo.com/show/129839/avatar.svg" alt="user-image"/> 
+            <img src={session.user.image} className="rounded-full h-12 border p-1 cursor-pointer" onClick={()=>signOut()} /> :
+            <p className="text-sm text-black cursor-pointer" onClick={()=>signIn()}>Sign in</p>
             }
             </div>
     </header>
